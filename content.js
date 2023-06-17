@@ -172,8 +172,7 @@ chrome.runtime.onMessage.addListener(function (request) {
   }
 
   if (message === "Message from popup.js, please remove PAT") {
-    chrome.storage.local.remove("data", function () {
-    });
+    chrome.storage.local.remove("data", function () {});
     PAT_Token = "";
   }
 });

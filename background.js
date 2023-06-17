@@ -85,6 +85,12 @@ chrome.runtime.onMessage.addListener((message) => {
       });
     });
   }
+
+  if (message.message === "Message from popup.js, learn more") {
+    chrome.tabs.create({
+      url: "https://github.com/pankaj41/PR-Zipper/blob/main/README.md",
+    });
+  }
 });
 
 function blobToBase64(blob) {
