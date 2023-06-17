@@ -1,0 +1,19 @@
+{
+  "name": "PR Zipper",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description":"This extension is developed to download all the changed files in a PR of a repository at github with one click.",
+  "permissions": ["activeTab", "scripting", "downloads", "tabs", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
